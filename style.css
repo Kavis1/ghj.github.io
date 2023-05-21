@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #FFD700, #FFA500, #FF4500);
+    color: #FFFFFF;
+    margin-left: 360px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-left: 220px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+	border-radius: 10px;
+}
+
+button {
+    padding: 6px 8px;
+    font-size: 13px;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+	background: none;
+    border: none;
+}
+
+button1 {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 22px;
+    cursor: pointer;
+	margin-left: 10px;
+}
+
+#results-container {
+    padding: 20px;
+    background-color: rgb(124 88 88 / 80%)
+}
+
+#results-container .song {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: rgb(180 151 151 / 80%);
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.top-song {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.icon {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  background-color: transparent;
+}
