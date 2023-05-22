@@ -4,7 +4,7 @@ const topSongsContainer = document.getElementById('top-songs-container');
 let currentAudio = null;
 let currentIndex = 0;
 
-// Function to perform track search
+// api поиск
 function searchTracks(query) {
   const url = `https://api.jamendo.com/v3.0/tracks/?client_id=048b42db&format=json&limit=10&search=${encodeURIComponent(query)}`;
 
@@ -18,7 +18,7 @@ function searchTracks(query) {
     });
 }
 
-// Function to display search results
+// Отображение поиска
 function displayResults(results) {
   resultsContainer.innerHTML = '';
 
@@ -34,7 +34,7 @@ function displayResults(results) {
   }
 }
 
-// Function to display top songs in the sidebar
+// слайдбар
 function displayTopSongs(songs) {
   topSongsContainer.innerHTML = '';
 
@@ -44,7 +44,7 @@ function displayTopSongs(songs) {
   });
 }
 
-// Function to create a song element
+// меню песен
 function createSongElement(song) {
   const songElement = document.createElement('div');
   songElement.className = 'song';
@@ -62,7 +62,7 @@ function createSongElement(song) {
   let isPlaying = false;
   let volume = 1;
 
-  // Create controls
+  // управление
   function createControls() {
     if (!controlsElement) {
       controlsElement = createControlsElement(song.audio);
@@ -70,7 +70,7 @@ function createSongElement(song) {
     }
   }
 
-  // Remove controls
+  // убрать упр
   function removeControls() {
     if (controlsElement) {
       songElement.removeChild(controlsElement);
@@ -78,7 +78,7 @@ function createSongElement(song) {
     }
   }
 
-  // Show controls on song element or controls element hover
+  // показать элементы
   songElement.addEventListener('mouseover', createControls);
 
   // Hide controls on song element or controls element mouseout
@@ -89,7 +89,7 @@ function createSongElement(song) {
     }
   });
 
-  // Function to play the track
+  // включить музыку
   function playTrack() {
     if (currentAudio) {
       currentAudio.pause();
@@ -103,7 +103,7 @@ function createSongElement(song) {
     isPlaying = true;
   }
 
-  // Function to stop the track
+  // остановить 
   function stopTrack() {
     if (currentAudio) {
       currentAudio.pause();
@@ -114,7 +114,7 @@ function createSongElement(song) {
     }
   }
 
-  // Function to play the next track
+  // следующий трек
   function playNextTrack() {
     if (isPlaying) {
       const songs = Array.from(document.querySelectorAll('.song'));
@@ -128,7 +128,7 @@ function createSongElement(song) {
     }
   }
 
-  // Create controls element
+  // управление
   function createControlsElement(audioUrl) {
     const controlsElement = document.createElement('div');
     controlsElement.className = 'controls';
