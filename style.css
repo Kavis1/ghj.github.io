@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #FFD700, #FFA500, #FF4500);
+    background: #06050b url(bg.jpg) center top fixed no-repeat;
+	background-size: cover;
     color: #FFFFFF;
     margin-left: 360px;
     padding: 20px;
